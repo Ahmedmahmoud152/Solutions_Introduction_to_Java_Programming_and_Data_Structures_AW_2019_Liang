@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Chap02/Chap02.iml" filepath="$PROJECT_DIR$/Chap02/Chap02.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chap03/Chap03.iml" filepath="$PROJECT_DIR$/Chap03/Chap03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chap04/Chap04.iml" filepath="$PROJECT_DIR$/Chap04/Chap04.iml" />
       <module fileurl="file://$PROJECT_DIR$/Chapter01/Chapter01.iml" filepath="$PROJECT_DIR$/Chapter01/Chapter01.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Solutions_Introduction_to_Java_Programming_and_Data_Structures_AW_2019_Liang.iml" filepath="$PROJECT_DIR$/.idea/Solutions_Introduction_to_Java_Programming_and_Data_Structures_AW_2019_Liang.iml" />
     </modules>
