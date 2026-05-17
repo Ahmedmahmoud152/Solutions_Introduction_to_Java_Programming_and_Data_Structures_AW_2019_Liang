@@ -6,11 +6,10 @@ public class Q29 {
         System.out.println("Enter the year");
         int year = input.nextInt();
         System.out.println("Enter the first day");
-        int first = input.nextInt();
-        int dayMonth=30;
-        int month=1;
-        for ( month = 1; month <= 12; month++) {
-            dayMonth= switch (month) {
+        int k = input.nextInt();
+        for (int month = 1; month <= 12; month++) {
+            System.out.print("\t\t\t\t\t");
+            int dayMonth = switch (month) {
                 case 1 -> {
                     System.out.println("January " + year);
                     yield 31;
@@ -61,18 +60,21 @@ public class Q29 {
                 }
                 default -> month;
             };
-            System.out.println("___________________________________");
+            System.out.println("____________________________________________________");
             System.out.println("Sun\t\tMon\t\tTue\t\tWed\t\tThu\t\tFri\t\tSat");
-            for (int i = 0; i <first ; i++) {
+            for (int i = 0; i < k; i++) {
                 System.out.print("\t\t");
             }
 
-            for (int i = 1; i <=dayMonth; i++) {
-                System.out.print(i+"\t\t");
-              if ((i+first)%7==0){
-                  System.out.println();}
+            for (int i = 1; i <= dayMonth; i++) {
+                System.out.print(i + "\t\t");
+                if ((i + k) % 7 == 0) {
+                    System.out.println();
+                }
+                if (i == dayMonth) {
+                    k = ((i + k) % 7);
+                }
             }
-            first=dayMonth
             System.out.println();
         }
     }
