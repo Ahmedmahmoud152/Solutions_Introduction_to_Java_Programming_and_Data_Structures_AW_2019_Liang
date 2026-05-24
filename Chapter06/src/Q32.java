@@ -1,10 +1,18 @@
-public class Q30 {
-
+public class Q32 {
     public static void main(String[] args) {
-        craps();
+        int p1=0;
+        int p2=0;
+
+        for (int i = 0; i <10000 ; i++) {
+        if(craps()==1)
+            p1++;
+        else p2++;
+        }
+        System.out.println("the number of winning games."+p1);
+        System.out.println("the number of losing  games."+p2);
     }
 
-    public static void craps() {
+    public static int craps() {
 
         int point = 0;
 
@@ -13,38 +21,29 @@ public class Q30 {
 
         int sum = die1 + die2;
 
-        System.out.println("You rolled " + die1 + " + " + die2 + " = " + sum);
 
         // First roll
         if (sum == 2 || sum == 3 || sum == 12) {
-            System.out.println("You Lose!");
+            return 0;
         }
         else if (sum == 7 || sum == 11) {
-            System.out.println("You Win!");
+            return 1;
         }
         else {
 
             point = sum;
-            System.out.println("Point is " + point);
-
             while (true) {
 
                 die1 = (int)(Math.random() * 6) + 1;
                 die2 = (int)(Math.random() * 6) + 1;
 
                 sum = die1 + die2;
-
-                System.out.println("You rolled " + die1 + " + " + die2 + " = " + sum);
-
                 if (sum == point) {
-                    System.out.println("You Win!");
-                    break;
+                    return 1;
                 }
                 else if (sum == 7) {
-                    System.out.println("You Lose!");
-                    break;
+                    return 0;
                 }
             }
-        }
-    }
+        }}
 }
